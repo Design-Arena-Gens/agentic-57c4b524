@@ -1,0 +1,43 @@
+:root {
+  --bg: #0b0f16;
+  --panel: #0f1522;
+  --text: #e7edf5;
+  --muted: #a0b3c7;
+  --brand: #8b5cf6;
+  --brand-2: #06b6d4;
+  --card: #121a2a;
+  --card-border: #1e2a41;
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: linear-gradient(180deg, var(--bg), #08101e 60%, #060b14); color: var(--text); }
+
+a { color: inherit; text-decoration: none; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 32px 20px 80px; }
+
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 28px; position: sticky; top: 0; background: rgba(11,15,22,0.6); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(255,255,255,0.06); z-index: 10; }
+.brand { font-weight: 800; letter-spacing: 0.5px; background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.link { padding: 8px 12px; color: var(--muted); border-radius: 8px; transition: 150ms ease; }
+.link:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+.link.active { color: var(--text); }
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.title { font-size: clamp(28px, 6vw, 52px); line-height: 1.05; margin: 6px 0 12px; }
+.subtitle { font-size: clamp(16px, 3.5vw, 20px); color: var(--muted); margin: 0 0 18px; }
+.lede { font-size: clamp(14px, 3.2vw, 18px); color: #d9e3ee; opacity: 0.95; max-width: 900px; margin: 0 auto; }
+
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 36px; }
+.card { grid-column: span 12; padding: 18px 18px 16px; background: linear-gradient(180deg, var(--card), #0f1727); border: 1px solid var(--card-border); border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.card h2 { margin: 4px 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); }
+
+@media (min-width: 700px) {
+  .card { grid-column: span 4; }
+}
+
+.page { max-width: 800px; margin: 12px auto 0; }
+.facts { margin: 8px 0 0 0; padding-left: 18px; color: var(--muted); }
+.facts li { margin: 6px 0; }
+
+.footer { margin-top: 48px; color: var(--muted); text-align: center; }
